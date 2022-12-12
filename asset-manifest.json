@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Toochukwu-Friends/static/css/main.0d513a5b.css",
+    "main.js": "/Toochukwu-Friends/static/js/main.99effec6.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Toochukwu-Friends/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Toochukwu-Friends/index.html",
+    "main.0d513a5b.css.map": "/Toochukwu-Friends/static/css/main.0d513a5b.css.map",
+    "main.99effec6.js.map": "/Toochukwu-Friends/static/js/main.99effec6.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Toochukwu-Friends/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d513a5b.css",
+    "static/js/main.99effec6.js"
+  ]
+}
