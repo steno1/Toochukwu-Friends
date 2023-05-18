@@ -1,16 +1,21 @@
 import Card from "./Card";
 
 
-const CardList=({RobotArray})=>{
+const CardList=({RobotArrays})=>{
     
 
     return (
         <>
-{RobotArray.map((user, i)=>{
+{RobotArrays.map((user, i)=>{
     return(
-<Card name={RobotArray[i].name}
- key={i} id={RobotArray[i].id}
-  email={RobotArray[i].email}/>
+<Card name={RobotArrays[i].name}
+ key={i} id={RobotArrays[i].id}
+  email={RobotArrays[i].email}
+  
+  phone={RobotArrays[i].phone}
+  
+  />
+  
     )
 })}
         </>

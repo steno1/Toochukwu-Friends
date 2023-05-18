@@ -4,7 +4,7 @@ import './card.css'
 import "tachyons"
 
 
-const Card=({name, email, id})=>{
+const Card=({name, email, id, phone})=>{
     
    
     return(
@@ -14,6 +14,7 @@ const Card=({name, email, id})=>{
 <div className="animate1">
     <h1>{name}</h1>
     <p>Email: {email}</p>
+    <p>Phone: {phone}</p>
 </div>
         </div>
     

@@ -89,7 +89,7 @@ that match the search criteria
                />
                 <Scroll>
                 <Error>
-                <CardList RobotArray={filterRobot}
+                <CardList RobotArrays={filterRobot}
                  />
                 </Error>
                   
