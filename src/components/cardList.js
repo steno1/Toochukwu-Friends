@@ -3,7 +3,6 @@ import Card from "./Card";
 
 const CardList=({RobotArrays})=>{
     
-
     return (
         <>
 {RobotArrays.map((user, i)=>{
