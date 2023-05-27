@@ -2,6 +2,7 @@ import CardList from "../components/cardList";
 import Error from "../components/ErrorBoundary";
 import SearchBox from "../components/SearchBox/SearchBar";
 import React,{ Component} from "react";
+import { connect } from 'react-redux';
 import "../App.css"
 import Scroll from "../components/scroll/Scroll";
 
@@ -16,6 +17,7 @@ class App extends Component{
     }
    
     componentDidMount(){
+       
         fetch("https://jsonplaceholder.typicode.com/users")
         .then(response=>{
           response.json().then(users=>this.setState({  Robots:users,}) 
@@ -99,4 +101,8 @@ that match the search criteria
              }
               }
 
-export default App;
+              const mapStateToProps = (state) => ({
+                store: state,
+              });
+
+              export default connect(mapStateToProps)(App);
