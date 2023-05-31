@@ -10,7 +10,10 @@ import { setSearchField } from "../action";
 
 const mapStateToProps = (state) => {
   return {
-    searchField: state.searchRobots.searchField,
+    searchFields: state.search.searchFielder,
+    robots: state.request.requestRobots,
+    isPending:state.request.isPending,
+    error:state.request.error
   };
 };
 
@@ -37,18 +40,15 @@ class App extends Component {
       });
   }
 
-  searchFunction = (event) => {
-    this.props.onSearchChange(event); // Call the dispatched action to update the search field in the Redux store
-  };
 
   render() {
     const { Robots } = this.state;
-    const { searchField, onSearchChange } = this.props;
+    const { searchFields, onSearchChange } = this.props;
 
     const filterRobots = Robots.filter((robot) => {
       return (
-        robot.name.toLowerCase().includes(searchField.toLowerCase()) ||
-        robot.email.toLowerCase().includes(searchField.toLowerCase())
+        robot.name.toLowerCase().includes(searchFields.toLowerCase()) ||
+        robot.email.toLowerCase().includes(searchFields.toLowerCase())
       );
     });
 
