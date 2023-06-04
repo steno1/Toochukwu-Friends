@@ -5,7 +5,7 @@ import { CHANGE_SEARCH_FIELD,
     REQUEST_ROBOTS_FAILED } from "./constant.js"
 
 const initialStateSearch={
-    searchFielder:""
+    searchField:""
 }
 export const searchRobots=(state=initialStateSearch, action={})=>{
   
@@ -28,31 +28,29 @@ error:""
 
 }
 
-
-export const requestRobots=(state=initialStateRobots, action={})=>{
-  
+export const requestRobots = (state = initialStateRobots, action = {}) => {
     switch (action.type) {
-        case REQUEST_ROBOTS_PENDING :
-            return {...state,
-            IsPending:true,
-            
-            }
-
-            case REQUEST_ROBOTS_SUCCESS :
-            return {...state,
-            robot:action.payload,
-            IsPending:false
-            
-            }
-
-            case REQUEST_ROBOTS_FAILED :
-            return {...state,
-            error:action.payload,
-            IsPending:false
-            
-            }
-
-        default:
-            return state
+      case REQUEST_ROBOTS_PENDING:
+        return {
+          ...state,
+          isPending: true,
+        };
+  
+      case REQUEST_ROBOTS_SUCCESS:
+        return {
+          ...state,
+          robots: action.payload, // Corrected property name
+          isPending: false,
+        };
+  
+      case REQUEST_ROBOTS_FAILED:
+        return {
+          ...state,
+          error: action.payload,
+          isPending: false,
+        };
+  
+      default:
+        return state;
     }
-    }
+  };
