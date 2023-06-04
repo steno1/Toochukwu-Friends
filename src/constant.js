@@ -4,3 +4,7 @@ export const REQUEST_ROBOTS_PENDING="REQUEST_ROBOTS_PENDING";
 export const REQUEST_ROBOTS_SUCCESS="REQUEST_ROBOTS_SUCCESS";
 export const REQUEST_ROBOTS_FAILED="REQUEST_ROBOTS_FAILED";
 
+/* This file defines the action type constants used in the
+ Redux actions.It exports constants such as CHANGE_SEARCH_FIELD,
+  REQUEST_ROBOTS_PENDING,REQUEST_ROBOTS_SUCCESS,
+   and REQUEST_ROBOTS_FAILED.*/
