@@ -65,3 +65,5 @@ Redux Thunk middleware intercepts this function and provides the
  dispatch function as an argument. This enables the thunk to dispatch
   actions asynchronously, making it suitable for handling asynchronous
    operations such as API requests.*/
+/*N/B A middleware is just a tunnel that actions go through and it
+notices a function and act upon it*/
