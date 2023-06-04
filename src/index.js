@@ -14,7 +14,12 @@ import './index.css';
 import 'tachyons';
 import { searchRobots, requestRobots } from './reducers';
 import App from './containers/App';
-//import thunkMiddleware from "redux-thunk";
+import thunkMiddleware from "redux-thunk";
+/* Redux Thunk is a middleware that allows you to write 
+action creators that return functions instead of plain
+ action objects. These functions can perform asynchronous
+  operations, such as making API calls,
+ before dispatching the actual action objects to the Redux store.*/
 
 const logger = createLogger();
 /* const logger = createLogger();: This line creates a logger
@@ -39,7 +44,7 @@ const store = configureStore({
     request: requestRobots,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware()
-  .concat( logger, customMiddleware),
+  .concat(thunkMiddleware, logger, customMiddleware),
 });
 /* The Redux store is created using the configureStore
  function from Redux Toolkit. It takes an object as 
